@@ -1,0 +1,30 @@
+plot "192474_IT822_PDR.csv" using 1:2 with linespoints title "DSDV","192474_IT822_PDR.csv" using 1:3 with linespoints title "AODV","192474_IT822_PDR.csv" using 1:4 with linespoints title "DSR"
+
+plot "192474_IT822_throughput.csv" using 1:2 with linespoints title "DSDV","192474_IT822_throughput.csv" using 1:3 with linespoints title "AODV","192474_IT822_throughput.csv" using 1:4 with linespoints title "DSR"
+
+plot "192474_IT822_delay.csv" using 1:2 with linespoints title "DSDV","192474_IT822_delay.csv" using 1:3 with linespoints title "AODV","192474_IT822_delay.csv" using 1:4 with linespoints title "DSR"
+
+
+
+
+install ns2: 
+
+gedit ~/.bashrc
+
+# LD_LIBRARY_PATH
+OTCL_LIB=/opt/ns-allinone-2.35/otcl-1.14/
+NS2_LIB=/opt/ns-allinone-2.35/lib/
+USR_Local_LIB=/usr/local/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$OTCL_LIB:$NS2_LIB:$USR_Local_LIB
+
+# TCL_LIBRARY
+TCL_LIB=/opt/ns-allinone-2.35/tcl8.5.10/library/
+USR_LIB=/usr/lib/
+export TCL_LIBRARY=$TCL_LIBRARY:$TCL_LIB:$USR_LIB
+
+# PATH
+XGRAPH=/opt/ns-allinone-2.35/xgraph-12.2/:/opt/ns-allinone-2.35/bin/:/opt/ns-allinone-2.35/tcl8.5.10/unix/:/opt/ns-allinone-2.35/tk8.5.10/unix/
+NS=/opt/ns-allinone-2.35/ns-2.35/
+NAM=/opt/ns-allinone-2.35/nam-1.15/
+export PATH=$PATH:$XGRAPH:$NS:$NAM
+#—-
